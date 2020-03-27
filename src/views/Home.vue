@@ -1,14 +1,19 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
+  <div>
+    <el-button type="info" @click="logout">退出</el-button>
   </div>
 </template>
 
-<script>
-// @ is an alias to /src
+<script lang="ts">
+import { Vue, Component } from 'vue-property-decorator'
 
-export default {
-  name: "Home",
-  components: {}
-};
+@Component
+export default class Home extends Vue {
+  public logout() {
+    window.sessionStorage.clear()
+    this['$router'].push('/login')
+  }
+}
 </script>
+
+<style lang="less" scoped></style>

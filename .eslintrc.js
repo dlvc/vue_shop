@@ -17,6 +17,8 @@ module.exports = {
         'indent': 'off',
         'quoted': 'off',
         'quotes': 'off',
-        'semi': 'off'
+        'semi': 'off',
+        'space-before-function-paren': 'off',
+        'dot-notation': 'off'
     }
 }
